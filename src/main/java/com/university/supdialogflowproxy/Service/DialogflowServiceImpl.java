@@ -55,7 +55,7 @@ public class DialogflowServiceImpl implements DialogflowService {
                 paramList.add(key.asText());
             }
             System.out.println(name);
-            if(name.isNull()) {
+            if(name.size() == 0) {
                 System.out.println("You've got a message");
                 System.out.println(root.path("result").path("fulfillment").path("speech"));
                 smalltalk.add(new Article(null, null, null, root.path("result").path("fulfillment").path("speech").asText()));
